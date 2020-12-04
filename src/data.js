@@ -8,17 +8,19 @@ const data =   {
             price:60,
             brand:'Nike',
             rating: 4.5,
+            description:"100% cotton with a smooth swail feel",
             numReviews: 10,
-            countInStock: 6 
+            countInStock: 0 
         },
         {
          _id:'2',
-         name:'Fit Shirt',
+         name:'Adidas Fit Shirt',
          catergory:'Shirts',
          image:'/images/d2.jpg',
          price:50,
          brand:'Nike', 
          rating:4.7,
+         description:"100% cotton with a smooth swail feel",
          numReviews:10,
          countInStock: 5
            
@@ -26,12 +28,13 @@ const data =   {
      },
      {   
          _id:'3',
-         name:'Fitting Shirt',
+         name:' Nike Fitting Shirt',
          catergory:'Shirts',
          image:'/images/d3.jpg',
          price:70,
          brand:'Nike',
          rating:3.3,
+         description:"100% cotton with a smooth swail feel",
          numReviews:8,
          countInStock: 6
      
@@ -39,35 +42,38 @@ const data =   {
      },
      {
          _id:'4',
-         name:'Cool Pant',
+         name:'Gucci Pant',
          catergory:'Pants',
          image:'/images/P4.jpg',
          price:50,
          brand:'Nike', 
          rating:4.6,
+         description:"100% cotton with a smooth swail feel",
          numReviews:10,
          countInStock: 7
          
      },
      {
          _id:'5',
-         name:'Nice Pant',
+         name:'Calvin Klein Pant',
          catergory:'Pants',
          image:'/images/P5.jpg',
          price:50,
          brand:'Nike', 
          rating:4.0,
+         description:"100% cotton with a smooth swail feel",
          numReviews:10, 
          countInStock: 8  
      },
      {
          _id:'6',
-         name:'Fit pant',
+         name:'Konline pant',
          catergory:'Pants',
          image:'/images/P6.jpg',
          price:50,
          brand:'Nike', 
          rating:4.2,
+         description:"100% cotton with a smooth swail feel",
          numReviews:10,
          countInStock: 4
 
