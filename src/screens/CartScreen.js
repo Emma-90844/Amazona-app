@@ -20,7 +20,7 @@ export default function CartScreen(props) {
   const removeFromCartHandler = (id) => {
     dispatch(removeFromCart(id));
   }
-  
+
   useEffect(() => {
     if (productId) {
       dispatch(addToCart(productId, qty))
@@ -37,10 +37,10 @@ export default function CartScreen(props) {
     <div className="row">
       <div className="col-2">
         <h1>Shopping Cart</h1>
-        {cartItems.length === 0 ?( <MessageBox>
+        {cartItems.length === 0 ? (<MessageBox>
           Cart is Empty     <b><Link to="/">Go Shopping</Link></b>
         </MessageBox>
-         ) : (
+        ) : (
             <ul>
               {
                 cartItems.map((item) => (
@@ -69,8 +69,8 @@ export default function CartScreen(props) {
                             dispatch(addToCart(item.product, Number(e.target.value))
                             )
                           }>
- 
-                      {/* Options  inside the select Box*/}
+
+                          {/* Options  inside the select Box*/}
                           {
                             [...Array(item.countInStock).keys()].map((x) => (
                               // For the first element set the key , key={x}
@@ -87,12 +87,12 @@ export default function CartScreen(props) {
 
                       {/* Last coloum of the cart items */}
                       <div>
-                      <button
-                      type="button"
-                      className="button"
-                      onClick={() => removeFromCartHandler(item.product)}
-                    >
-                      Delete
+                        <button
+                          type="button"
+                          className="button"
+                          onClick={() => removeFromCartHandler(item.product)}
+                        >
+                          Delete
                     </button>
                       </div>
                     </div>
