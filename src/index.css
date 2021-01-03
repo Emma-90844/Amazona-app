@@ -230,11 +230,10 @@ img.small{
   flex-direction: column;
   margin: 1rem
 }
-.form lab el {
+.form label {
   margin: 1rem 0;
   display: block;
 }
-
 
 
 /* dropdown */
