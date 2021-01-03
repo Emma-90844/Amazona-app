@@ -5,15 +5,11 @@ import { savePaymentMethod } from '../actions/cartActions';
 
 export default function PaymentMethodScreen(props) {
     const cart = useSelector(state => state.cart) 
-    console.log(cart)
     const { shippingAddress } = cart;
-    console.log({shippingAddress})
 
     if(!shippingAddress.address){
         props.history.push('/shipping');
     }
-
-
 
 
     const [paymentMethod, setPaymentMethod] = useState('PayPal')
@@ -35,7 +31,7 @@ export default function PaymentMethodScreen(props) {
                 <div>
                     <input type="radio"
                         id="mobileMoney"
-                        value="mobileMoney"
+                        value="Mobile mobile"
                         name="paymentMethod"
                         required
                     
