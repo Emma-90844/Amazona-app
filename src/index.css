@@ -1,3 +1,11 @@
+@media(max-width: 400px){
+  .logo {
+    width: 15rem; 
+  }
+ 
+}
+
+
 html {
   font-size: 62.5%; /*Default browser is 16px*/
   box-sizing: border-box;
@@ -199,6 +207,8 @@ img.small{
 }
 .alert-info {
   color: #2020a0;
+  /* background-color: #d8dcfd; */
+  /* color: #28283d; */
   background-color: #e0e0ff;
 }
 .alert-danger {
@@ -212,11 +222,7 @@ img.small{
   padding: .4rem;
   
 }
-@media(max-width: 400px){
-  .logo {
-    width: 15rem;
-  }
-}
+
 
 
 /* form  */
