@@ -42,7 +42,7 @@ const signoutHandler = () => {
 
           {/* LOGO */}
           <div>
-            <Link to="/cart">Cart
+            <Link to="/cart"><i className="fa-lg fa fa-shopping-cart"></i>
                {cartItems.length > 0 && (
                 <span className="badge">{cartItems.length}</span>
               )}
