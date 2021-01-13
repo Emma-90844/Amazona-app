@@ -13,6 +13,7 @@ import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import OrderScreen from './screens/OrderScreen';
+import OrderHistoryScreen from './screens/OrderHistoryScreen';
 
 function App() {
 
@@ -23,11 +24,11 @@ function App() {
   const userSignin = useSelector((state) => state.userSignin)
   const { userInfo } = userSignin;
 
-// 
-const dispatch = useDispatch();
-const signoutHandler = () => {
-  dispatch(signout())
-}
+  // 
+  const dispatch = useDispatch();
+  const signoutHandler = () => {
+    dispatch(signout())
+  }
   return (
     <BrowserRouter>
       <div className="grid-container">
@@ -43,16 +44,22 @@ const signoutHandler = () => {
           {/* LOGO */}
           <div>
             <Link to="/cart"><i className="fa-lg fa fa-shopping-cart"></i>
-               {cartItems.length > 0 && (
+              {cartItems.length > 0 && (
                 <span className="badge">{cartItems.length}</span>
               )}
             </Link>
             {/* Conditional rendering of user signin name in place of sign in button */}
+
+
             {
               userInfo ? (
                 <div className="dropdown">
                   <Link to="#">{userInfo.name}<i className="fa fa-caret-down"></i></Link>
                   <ul className="dropdown-content">
+                    {/* history */}
+                    <li>
+                      <Link to="/orderhistory">Order history</Link>
+                    </li>
                     <Link to="#signout" onClick={signoutHandler}>Sign Out</Link>
                   </ul>
                 </div>
@@ -72,6 +79,7 @@ const signoutHandler = () => {
           <Route path="/payment" component={PaymentMethodScreen} ></Route>
           <Route path="/placeorder" component={PlaceOrderScreen} ></Route>
           <Route path="/order/:id" component={OrderScreen} ></Route>
+          <Route path="/orderHistory" component={OrderHistoryScreen} ></Route>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <footer className="row center">
