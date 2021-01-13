@@ -7,7 +7,6 @@ import { detailsOrder } from '../actions/orderActions';
 import MessageBox from '../components/MessageBox';
 import LoadingBox from './../components/LoadingBox';
 import { payOrder } from './../actions/orderActions';
-import { ORDER_PAY_FAIL } from '../constants/orderConstants';
 import { ORDER_PAY_RESET } from './../constants/orderConstants';
 
 
@@ -37,6 +36,7 @@ export default function OrderScreen(props) {
             };
             document.body.appendChild(script);
         };
+        
         if(!order || successPay || (order && order._id !== orderId)){
             dispatch({ type: ORDER_PAY_RESET})
             dispatch(detailsOrder(orderId)); 
@@ -91,7 +91,7 @@ export default function OrderScreen(props) {
                                     </div>
                                 </li>
 
-                                {/* Payment Box */}
+                                 {/* Payment Box */}
                                 <li>
                                     <div className="card card-body">
                                         <h2>Payment</h2>
