@@ -14,6 +14,7 @@ import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import OrderScreen from './screens/OrderScreen';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
+import ProfileScreen from './screens/ProfileScreen';
 
 function App() {
 
@@ -36,10 +37,10 @@ function App() {
           {/* LOGO */}
           <div>
             <Link className="brand" to="/">
-
               <img src={logo} alt="logo" className="logo"></img>
             </Link>
           </div>
+
 
           {/* LOGO */}
           <div>
@@ -56,11 +57,16 @@ function App() {
                 <div className="dropdown">
                   <Link to="#">{userInfo.name}<i className="fa fa-caret-down"></i></Link>
                   <ul className="dropdown-content">
-                    {/* history */}
+                    <li>
+                      <Link to="/profile">User Profile</Link>
+                    </li>
                     <li>
                       <Link to="/orderhistory">Order history</Link>
                     </li>
+                    <li>
                     <Link to="#signout" onClick={signoutHandler}>Sign Out</Link>
+                    </li>
+                    
                   </ul>
                 </div>
               ) : (<Link to="/signin">Sign In</Link>)
@@ -80,6 +86,7 @@ function App() {
           <Route path="/placeorder" component={PlaceOrderScreen} ></Route>
           <Route path="/order/:id" component={OrderScreen} ></Route>
           <Route path="/orderHistory" component={OrderHistoryScreen} ></Route>
+          <Route path="/profile" component={ProfileScreen} ></Route>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <footer className="row center">
