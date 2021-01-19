@@ -50,9 +50,8 @@ export default function OrderScreen(props) {
                 }
             }
         }
-        // dispatch detail action
-        // dispatch(detailsOrder(orderId));
-    }, [dispatch, order, orderId, sdkReady])
+
+    }, [dispatch, order, orderId, sdkReady,successPay])
 
     // for paypal button
     const successPaymentHandler = (paymentResult) => {
