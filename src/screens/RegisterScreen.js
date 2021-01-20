@@ -19,9 +19,6 @@ export default function RegisterScreen(props) {
   const { userInfo, loading, error } = userRegister;
 
   const dispatch = useDispatch();
-
-
-
   const submitHandler = (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
@@ -30,19 +27,14 @@ export default function RegisterScreen(props) {
       dispatch(register(name, email, password));
     }
   };
-
-
   useEffect(() => {
     if (userInfo) {
       props.history.push(redirect);
     }
   }, [props.history, redirect, userInfo]);
-
-
   return (
     <div>
       <form className="form" onSubmit={submitHandler}>
-
         <div>
           <h1>Create Account</h1>
         </div>
@@ -53,13 +45,11 @@ export default function RegisterScreen(props) {
           <input
             type="text"
             id="name"
-            placeholder="Enter name" 
+            placeholder="Enter name"
             required
             onChange={(e) => setName(e.target.value)}
           ></input>
         </div>
-
-
         <div>
           <label htmlFor="email">Email address</label>
           <input
@@ -70,8 +60,6 @@ export default function RegisterScreen(props) {
             onChange={(e) => setEmail(e.target.value)}
           ></input>
         </div>
-
-
         <div>
           <label htmlFor="password">Password</label>
           <input
@@ -82,8 +70,6 @@ export default function RegisterScreen(props) {
             onChange={(e) => setPassword(e.target.value)}
           ></input>
         </div>
-
-
         <div>
           <label htmlFor="confirmPassword">Confirm Password</label>
           <input
@@ -94,27 +80,20 @@ export default function RegisterScreen(props) {
             onChange={(e) => setConfirmPassword(e.target.value)}
           ></input>
         </div>
-
-
         <div>
           <label />
           <button className="primary" type="submit">
             Register
           </button>
         </div>
-
-
         <div>
           <label />
           <div>
-            Already have an account?{''}
-            <Link to={`/signin?redirect=${redirect}`}>  Sign-In</Link>
+            Already have an account?{' '}
+            <Link to={`/signin?redirect=${redirect}`}>Sign-In</Link>
           </div>
         </div>
-
       </form>
     </div>
-
-
   );
 }

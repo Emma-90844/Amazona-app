@@ -1,9 +1,12 @@
-@media(max-width: 400px){
+@media(width: 200px){
   .logo {
-    width: 15rem; 
+    width: 1rem; 
   }
  
 }
+/* .logo{
+  width: 30rem;
+} */
 
 
 html {
@@ -219,12 +222,13 @@ img.small{
   background-color: #ffe0e0e0;
 }
 /* Screen size */
-.logo{
-  /* width: 15rem; */
-  /* background-color: rgb(255, 255, 255); */
-  padding: .4rem;
+/* .logo{
+  width: 15rem; 
+   background-color: rgb(255, 255, 255); 
+   padding: .4rem;
   
-}
+} */
+
 .alert-success {
   color: #20a020;
   background-color: #eeffe0;

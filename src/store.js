@@ -2,7 +2,7 @@ import {createStore, applyMiddleware, compose, combineReducers} from 'redux';
 import thunk from 'redux-thunk'
 import { productDetailsReducer, productListReducer } from './reducers/productReducers';
 import { cartReducer } from './reducers/cartReducers';
-import { userSigninReducer, userDetailsReducer, userUpdateProfileReducer, userupdateProfileReducer } from './reducers/userReducers';
+import { userSigninReducer, userDetailsReducer, userUpdateProfileReducer } from './reducers/userReducers';
 import { orderCreateReducer, orderMineListReducer, orderPayReducer } from './reducers/orderReducers';
 import { orderDetailsReducer} from './reducers/orderReducers';
 
